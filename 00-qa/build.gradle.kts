@@ -1,1 +1,8 @@
-plugins { java }
+plugins { 
+    java 
+    checkstyle
+}
+
+repositories{
+    mavenCentral()
+}
