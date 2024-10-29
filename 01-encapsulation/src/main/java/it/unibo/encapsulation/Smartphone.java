@@ -9,24 +9,24 @@ public class Smartphone {
     private static final int DEF_RAM_SIZE = 8192;
     private static final int DEF_N_CPU = 8;
 
-    public final int cpuCount;
-    public final int ram;
-    public final int sdSize;
-    public final String brand;
-    public final String model;
-    public final boolean hasGPS;
-    public final boolean has3G;
-    public final boolean hasNFC;
+    private int cpuCount;
+    private int ram;
+    private int sdSize;
+    private String brand;
+    private String model;
+    private boolean hasGPS;
+    private boolean has3G;
+    private boolean hasNFC;
 
     public Smartphone(
-        final int cpuCount,
-        final int ram,
-        final int sdSize,
-        final String brand,
-        final String model,
-        final boolean hasGPS,
-        final boolean has3G,
-        final boolean hasNFC
+        int cpuCount,
+        int ram,
+        int sdSize,
+        String brand,
+        String model,
+        boolean hasGPS,
+        boolean has3G,
+        boolean hasNFC
     ) {
         this.cpuCount = cpuCount;
         this.ram = ram;
@@ -53,6 +53,89 @@ public class Smartphone {
     public Smartphone(final String brand, final String model, final boolean hasGPS, final boolean has3G) {
         this(DEF_N_CPU, DEF_RAM_SIZE, DEF_SD_SIZE, brand, model, hasGPS, has3G, DEF_HAS_NFC);
     }
+
+    // Getting e Setting
+
+    // Metodo getCpuCount
+    public int getCpuCount() {
+        return cpuCount;
+    }
+
+    // Metodo setCpuCount
+    public void setCpuCount(int cpuCount) {
+        this.cpuCount = cpuCount;
+    }
+
+    // Metodo getRam
+    public int getRam() {
+        return ram;
+    }
+
+    // Metodo setRam
+    public void setRam(int ram) {
+        this.ram = ram;
+    }
+
+    // Metodo getSdSize
+    public int getSdSize() {
+        return sdSize;
+    }
+
+    // Metodo setSdSize
+    public void setSdSize(int sdSize) {
+        this.sdSize = sdSize;
+    }
+
+    // Metodo getBrand
+    public String getBrand() {
+        return brand;
+    }
+
+    // Metodo setBrand
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    // Metodo getModel
+    public String getModel() {
+        return model;
+    }
+
+    // Metodo setModel
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    // Metodo getHasGPS
+    public boolean getHasGPS() {
+        return hasGPS;
+    }
+
+    // Metodo setHasGPS
+    public void setHasGPS(boolean hasGPS) {
+        this.hasGPS = hasGPS;
+    }
+
+    // Metodo getHas3G
+    public boolean getHas3G() {
+        return has3G;
+    }
+
+    // Metodo setHas3G
+    public void setHas3G(boolean has3G) {
+        this.has3G = has3G;
+    }
+
+    // Metodo getHasNFC
+    public boolean getHasNFC() {
+        return hasNFC;
+    }
+
+    // Metodo setHasNFC
+    public void setHasNFC(boolean hasNFC) {
+        this.hasNFC = hasNFC;
+    }
+
 
     public void printStringRep() {
         System.out.println("n CPU(s): " + cpuCount);
